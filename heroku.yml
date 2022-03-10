@@ -1,6 +1,11 @@
-build:
-  docker:
-    web: Dockerfile
-    restart: always
+version: '3'
+
+services:
+  transfer:
+    build:
+        context: .
+        dockerfile: Dockerfile
     ports:
-       - '3100:3100'
+        - '3100:3100'
+    image: transfer:1.00
+    container_name: transfer
