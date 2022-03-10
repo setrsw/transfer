@@ -32,5 +32,8 @@ app.use(ctx=>{
         })
     }
 })
-app.listen(config.port)
+console.log(config.port)
+app.listen(config.port,()=>{
+    console.log('服务进行中。。。')
+})
 
