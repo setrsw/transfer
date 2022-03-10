@@ -4,9 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN apt-get update\
-  && yarn \
-  && npm install;
+RUN npm install;
 
-EXPOSE 3000
+EXPOSE 3100
 ENTRYPOINT ["npm", "run", "start"]
