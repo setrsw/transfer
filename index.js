@@ -31,6 +31,7 @@ app.use(ctx=>{
             console.log(error)
         })
     }
+    ctx.body = JSON.stringify(result)
 })
 console.log(config.port)
 app.listen(config.port,()=>{
