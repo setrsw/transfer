@@ -33,6 +33,8 @@ app.use(ctx=>{
         }).catch(error=>{
             result.error=error
             console.log(error)
+        }).finally(()=>{
+            ctx.body = JSON.stringify(result)
         })
     }
     ctx.body = JSON.stringify(result)
