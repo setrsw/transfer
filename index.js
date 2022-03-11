@@ -21,7 +21,7 @@ app.use(ctx=>{
         result.msg = 'lacking url';
     }
     else{
-        axios.post(url=config.ip,options,{
+        axios.post(config.ip+'',options,{
             headers:{
                 "Content-type":"application/json"
             },
