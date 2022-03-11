@@ -20,6 +20,6 @@
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "nodemon": "^2.0.15",
-    "require": "^2.4.20"
+    "require": "^0.4.4"
   }
 }
