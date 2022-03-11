@@ -9,7 +9,9 @@ app.use(ctx=>{
     const options =ctx.request.body;
     const result = {
         code: 0,
-        data: options
+        data: options,
+        response : 'not sent',
+        error : 'not sent'
     }
     console.log(result)
     if(config.secret && config.secret !== options.secret){
@@ -26,8 +28,10 @@ app.use(ctx=>{
                 "Content-type":"application/json"
             },
         }).then((response)=>{
+            result.response=response
             console.log(response)
         }).catch(error=>{
+            result.error=error
             console.log(error)
         })
     }
