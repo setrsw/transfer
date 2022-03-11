@@ -26,9 +26,9 @@ app.use(ctx=>{
                 "Content-type":"application/json"
             },
         }).then((response)=>{
-            result.response=response
+            console.log(response)
         }).catch(error=>{
-            result.error=error
+            console.log(error)
         })
     }
     ctx.body = JSON.stringify(result)
